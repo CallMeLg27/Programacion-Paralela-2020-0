@@ -1,9 +1,10 @@
 //============================================================================
-// Name        : maximo_secuencial.cpp
+// Name        : EjemploBOR.cpp
 // Author      : Esquivel Grados Luis Germán
-// Version     :
+// Version     : 1.0
 // Copyright   : Distribucion libre
-// Description : Hello World in C++, Ansi-style
+// Description : Efectúa la operación "Máximo" en un arreglo "A" usando varios procesos para agilizar el trabajo e
+//		 identifica al proceso que halló dicho valor
 //============================================================================
 
 #include "mpi.h"
@@ -81,6 +82,7 @@ int main(int argc, char *argv[]) {
 			 cout<<VectorA[i]<<" ";
 		 }
 		 cout<<"Maximo de A: "<<total_max.val<<endl;
+		 cout<<"Proceso que halló el máxmo de A: "<<total_max.val<<endl;
 	}
 	 MPI_Finalize();
 	return 0;
