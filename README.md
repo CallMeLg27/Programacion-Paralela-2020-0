@@ -8,4 +8,4 @@ Facultad: FISI
 
 Escuela: Ingenierìa de Sistemas
 
-La carpeta MPI_Ejemplos contiene la última tarea dejada
+La carpeta EjemplosMPI_Reduce contiene la última tarea dejada
