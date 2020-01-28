@@ -7,3 +7,5 @@ Código: 17200154
 Facultad: FISI
 
 Escuela: Ingenierìa de Sistemas
+
+La carpeta MPI_Ejemplos contiene la última tarea dejada
