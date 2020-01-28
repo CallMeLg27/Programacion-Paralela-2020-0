@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : EjemploBOR.cpp
+// Name        : EjemploMAXLOC.cpp
 // Author      : Esquivel Grados Luis Germán
 // Version     : 1.0
 // Copyright   : Distribucion libre
