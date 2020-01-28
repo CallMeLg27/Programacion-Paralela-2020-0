@@ -1,9 +1,10 @@
 //============================================================================
-// Name        : maximo_secuencial.cpp
+// Name        : EjemploMINLOC.cpp
 // Author      : Esquivel Grados Luis Germán
-// Version     :
+// Version     : 1.0
 // Copyright   : Distribucion libre
-// Description : Hello World in C++, Ansi-style
+// Description : Efectúa la operación "Mínimo" en un arreglo "A" usando varios procesos para agilizar el trabajo e
+//		 identifica al proceso que halló dicho valor
 //============================================================================
 
 #include "mpi.h"
