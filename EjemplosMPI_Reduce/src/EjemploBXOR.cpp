@@ -1,9 +1,10 @@
 //============================================================================
 // Name        : maximo_secuencial.cpp
+// Name        : EjemploBXOR.cpp
 // Author      : Esquivel Grados Luis Germán
-// Version     :
+// Version     : 1.0
 // Copyright   : Distribucion libre
-// Description : Hello World in C++, Ansi-style
+// Description : Efectúa la operación "Bitwise XOR" en un arreglo A usando varios procesos para agilizar el trabajo
 //============================================================================
 
 #include "mpi.h"
