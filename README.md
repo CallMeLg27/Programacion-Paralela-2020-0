@@ -6,4 +6,4 @@ Código: 17200154
 
 Facultad: FISI
 
-Escuela: Ingenierìa de Sistemas
+Escuela: Ingeniería de Sistemas
