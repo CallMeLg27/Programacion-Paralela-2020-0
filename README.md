@@ -7,5 +7,3 @@ Código: 17200154
 Facultad: FISI
 
 Escuela: Ingenierìa de Sistemas
-
-La carpeta EjemplosMPI_Reduce contiene la última tarea dejada
