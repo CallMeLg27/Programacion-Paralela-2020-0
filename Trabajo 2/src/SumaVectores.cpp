@@ -4,7 +4,8 @@
  Author      : Esquivel Grados Luis Germán
  Version     :
  Copyright   : Distribucion libre
- Description : Suma dos vectore. La comunicación se realiza usando send y recv
+ Description : Suma dos vectore. La comunicación se realiza usando send y recv, esta version
+  	  	  	   solo funciona con 10 procesos
  ============================================================================
  */
 #include <math.h> 
@@ -18,18 +19,10 @@ int main(int argc, char *argv[]) {
 	size = MPI::COMM_WORLD.Get_size();
 	rank = MPI::COMM_WORLD.Get_rank();
 	if (rank == 0) {
-		/*
-		printf("Enter n\n");
-		scanf("%lf", n);
-
-		printf("Enter x values\n");
-		int x[n],y[n],z[n];
-		for(int i=0;i<n;i++){
-		   scanf("%lf", x[i]);
+		if(size!=10){
+			cout<<"La versión actual solo funciona con 10 procesos!!\nError!!";
+			exit(0);
 		}
-		for(int i=0;i<n;i++){
-		   scanf("%lf", y[i]);
-		}*/
 		n=100;
 		int x[n],y[n],z[n];
 		for(int i=0;i<100;i++){
@@ -47,7 +40,7 @@ int main(int argc, char *argv[]) {
 						            MPI_STATUS_IGNORE);
 		}
 		for(int i=0;i<100;i++){
-			cout<<z[i]<<endl;
+			cout<<z[i]<<" ";
 		}
 	 }
 	else{
