@@ -7,13 +7,14 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
-    int n, local_prod, prod, rank, size;
+    int n, rank, size;
+    long long int local_prod, prod;
     MPI_Init(&argc, &argv);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     
     if (rank == 0) {
-        cout << "Ingrese n";
+        cout << "Ingrese n: ";
         cin>>n;
     }
     MPI_Bcast(&n,1,MPI_INT,0,MPI_COMM_WORLD);
@@ -32,7 +33,7 @@ int main(int argc, char *argv[]) {
     MPI_Reduce(&local_prod, // Elemento a enviar
             &prod, // Variable donde se almacena la reunion de los datos
             1, // Cantidad de datos a reunir
-            MPI_INT, // Tipo del dato que se reunira
+            MPI_LONG_LONG_INT, // Tipo del dato que se reunira
             MPI_PROD, // Operacion aritmetica a aplicar
             0, // Proceso que recibira los datos
             MPI_COMM_WORLD); // Comunicador
@@ -43,3 +44,4 @@ int main(int argc, char *argv[]) {
     MPI_Finalize();
     return 0;
 }
+
