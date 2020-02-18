@@ -1,4 +1,4 @@
-//Autor: Luis Germán
+//Autor: Luis Germán 
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
