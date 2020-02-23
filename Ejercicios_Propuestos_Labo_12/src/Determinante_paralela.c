@@ -1,10 +1,7 @@
 /*
  ============================================================================
  Name        : DETERMINATE DE UNA MATRIZ DE NXN
- Author      : LUIS GERMAN
- Version     : 1.0
- Copyright   : Distribucion libre
- Description : Hello OpenMP World in C
+ Author      : LUIS GERMAN ESQUIVEL GRADOS
  ============================================================================
  */
 #include <omp.h>
@@ -14,7 +11,7 @@
 #include <time.h>
 
 //TAMAÑO DE LA MATRIZ:
-#define N 4
+#define N 7
 double determinantOfMatrix(double mat[N][N], int n);
 double cofactor(double mat[N][N], int b,int j);
 int main (int argc, char *argv[]) {
@@ -24,9 +21,10 @@ int main (int argc, char *argv[]) {
   double mat[N][N];
   for(int i=0;i<N;i++){
   		for(int j=0;j<N;j++){
-  			mat[i][j]=rand()%3;
+  			mat[i][j]=rand()%6;
   		}
   	}
+  printf("\nMatriz generada:\n");
   for(int i=0;i<N;i++){
   		for(int j=0;j<N;j++){
   			printf("%lf ",mat[i][j]);
@@ -34,6 +32,7 @@ int main (int argc, char *argv[]) {
   		printf("\n");
   }
   	omp_set_num_threads(N);
+	printf("\nResolviendo la determinate con %d hilos:\n",N);
   	#pragma omp parallel
  {
 	 //por cofactores
@@ -55,7 +54,7 @@ int main (int argc, char *argv[]) {
 	 totalDet+=cof;
 
  }
- printf("%lf ",totalDet);
+ printf("\nDeterminate de la matriz: %lf ",totalDet);
  return 0;
 }
 
@@ -144,7 +143,7 @@ double cofactor(double mat[N][N], int b,int j){
 
 	}
 	double determinant = mat[0][j]*determinantOfMatrix(menor,b-1);
-	printf("determinant: %lf \n",determinant);
+	printf("Resultado calculado por thread %d: %lf \n",j,determinant);
 	if(j%2!=0)
 		determinant*=-1;
 	return determinant;
